@@ -8,7 +8,7 @@ parking_lots = {}
 lots_in_use = []
 
 
-@app.route('/entry', methods=['GET', 'POST'])
+@app.route('/entry', methods=['POST'])
 def entry():
     plate = request.args.get('plate')
     parking_lot = request.args.get('parkingLot')
@@ -35,7 +35,7 @@ def entry():
     })
 
 
-@app.route('/exit', methods=['GET', 'POST'])
+@app.route('/exit', methods=['POST'])
 def exit_parking():
     ticket_id = request.args.get('ticketId')
 
